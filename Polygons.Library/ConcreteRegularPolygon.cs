@@ -19,7 +19,8 @@ namespace Polygons.Library
 
 		public ConcreteRegularPolygon()
 		{
-			
+			NumberOfSides = 4;
+			SideLength = 12;
 		}
 		public ConcreteRegularPolygon(int sides, int length)
 		{

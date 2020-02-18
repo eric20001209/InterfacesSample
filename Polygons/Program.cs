@@ -12,8 +12,14 @@ namespace Polygons
 		static void Main(string[] args)
 		{
 			Square square = new Square(10);
-			var area = square.GetArea();
-			Console.WriteLine($"Area is：\t{area}");
+			DisplayPolygon("Square", square);
+			//var area = square.GetArea();
+			//Console.WriteLine($"Area is：\t{area}");
+		}
+
+		private static void DisplayPolygon(string ploygonType, dynamic polygon)
+		{
+			Console.WriteLine($"{ploygonType} has Sides:");
 		}
 	}
 }
