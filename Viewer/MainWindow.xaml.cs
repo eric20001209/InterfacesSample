@@ -26,5 +26,20 @@ namespace Viewer
 		{
 			InitializeComponent();
 		}
+
+		private void Clear_Click(object sender, RoutedEventArgs e)
+		{
+			myList.Items.Clear();
+		}
+
+		private void Concrete_Click(object sender, RoutedEventArgs e)
+		{
+
+		}
+
+		private void Abstraction_Click(object sender, RoutedEventArgs e)
+		{
+
+		}
 	}
 }

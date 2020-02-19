@@ -7,16 +7,10 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button Content="Concrete Type" HorizontalAlignment="Left" Margin="19,0,0,0" VerticalAlignment="Top" Width="132" Height="89" FontWeight="Bold" FontSize="14"/>
-        <Button Content="Abstraction" HorizontalAlignment="Left" Margin="19,112,0,0" VerticalAlignment="Top" Width="132" Height="89" FontWeight="Bold" FontSize="14"/>
-        <Button Content="Clear Data" HorizontalAlignment="Left" Margin="19,320,0,0" VerticalAlignment="Top" Width="132" Height="89" FontSize="14" FontWeight="Bold"/>
-        <ListView HorizontalAlignment="Left" Height="399" Margin="200,10,0,0" VerticalAlignment="Top" Width="582">
-            <ListView.View>
-                <GridView>
-                    <GridViewColumn/>
-                </GridView>
-            </ListView.View>
-        </ListView>
+        <Button Content="Concrete Type" HorizontalAlignment="Left" Margin="19,0,0,0" VerticalAlignment="Top" Width="132" Height="89" FontWeight="Bold" FontSize="14" Click="Concrete_Click"/>
+        <Button Content="Abstraction" HorizontalAlignment="Left" Margin="19,112,0,0" VerticalAlignment="Top" Width="132" Height="89" FontWeight="Bold" FontSize="14" Click="Abstraction_Click"/>
+        <Button x:Name="Clear" Content="Clear Data" HorizontalAlignment="Left" Margin="19,320,0,0" VerticalAlignment="Top" Width="132" Height="89" FontSize="14" FontWeight="Bold" Click="Clear_Click"/>
+        <ListBox x:Name="myList" HorizontalAlignment="Left" Height="399" Margin="307,10,0,0" VerticalAlignment="Top" Width="459"/>
 
     </Grid>
 </Window>
