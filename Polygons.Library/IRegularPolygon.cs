@@ -8,7 +8,7 @@ namespace Polygons.Library
 {
 	public interface IRegularPolygon
 	{
-		int NumberOfSides { get; set; }
+		int NumberOfSides { get; set; }  //just delaration, not automatic properties 
 		int SideLength{ get; set; }
 
 		double GetPerimeter();

@@ -13,13 +13,23 @@ namespace Polygons
 		{
 			Square square = new Square(10);
 			DisplayPolygon("Square", square);
-			//var area = square.GetArea();
-			//Console.WriteLine($"Area is：\t{area}");
+
+			var triangle = new Triangle(10);
+			DisplayPolygon("Triangle", triangle);
+
+			var octagon = new Octagon(10);
+			DisplayPolygon("Octagon", octagon);
+
+			Console.Read();
+
 		}
 
 		private static void DisplayPolygon(string ploygonType, dynamic polygon)
 		{
-			Console.WriteLine($"{ploygonType} has Sides:");
+			Console.WriteLine($"{ploygonType} number of Sides:\t{polygon.NumberOfSides}");
+			Console.WriteLine($"{ploygonType} side length:\t{polygon.SideLength}");
+			Console.WriteLine($"{ploygonType} perimeter:\t{polygon.GetPerimeter()}");
+			Console.WriteLine($"{ploygonType} area:\t{polygon.GetArea()}\r\n");
 		}
 	}
 }
