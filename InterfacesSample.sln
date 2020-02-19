@@ -11,9 +11,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Polygons.Library", "Polygon
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Viewer", "Viewer\Viewer.csproj", "{C0CB073D-728A-45FA-A309-F9694AAFD006}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "People.Library", "People.Library\People.Library.csproj", "{A3ED2999-EDB0-4369-92B0-4008F584218C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "People.Library", "People.Library\People.Library.csproj", "{A3ED2999-EDB0-4369-92B0-4008F584218C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{7BAD9F85-A081-467A-8684-B31CE352C5E1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common", "Common\Common.csproj", "{7BAD9F85-A081-467A-8684-B31CE352C5E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "People.Service", "People.Service\People.Service.csproj", "{375B5845-A360-4DF5-B51E-3E72933054E1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{7BAD9F85-A081-467A-8684-B31CE352C5E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7BAD9F85-A081-467A-8684-B31CE352C5E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7BAD9F85-A081-467A-8684-B31CE352C5E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{375B5845-A360-4DF5-B51E-3E72933054E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{375B5845-A360-4DF5-B51E-3E72933054E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{375B5845-A360-4DF5-B51E-3E72933054E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{375B5845-A360-4DF5-B51E-3E72933054E1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

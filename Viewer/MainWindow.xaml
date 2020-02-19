@@ -10,7 +10,10 @@
         <Button Content="Concrete Type" HorizontalAlignment="Left" Margin="19,0,0,0" VerticalAlignment="Top" Width="132" Height="89" FontWeight="Bold" FontSize="14" Click="Concrete_Click"/>
         <Button Content="Abstraction" HorizontalAlignment="Left" Margin="19,112,0,0" VerticalAlignment="Top" Width="132" Height="89" FontWeight="Bold" FontSize="14" Click="Abstraction_Click"/>
         <Button x:Name="Clear" Content="Clear Data" HorizontalAlignment="Left" Margin="19,320,0,0" VerticalAlignment="Top" Width="132" Height="89" FontSize="14" FontWeight="Bold" Click="Clear_Click"/>
-        <ListBox x:Name="myList" HorizontalAlignment="Left" Height="399" Margin="307,10,0,0" VerticalAlignment="Top" Width="459"/>
+        <ListBox x:Name="myList" HorizontalAlignment="Left" Height="399" Margin="441,10,0,0" VerticalAlignment="Top" Width="325"/>
+        <Button x:Name="Service" Content="Service" HorizontalAlignment="Left" Margin="222,0,0,0" VerticalAlignment="Top" Width="132" Height="89" FontWeight="Bold" FontSize="14" Click="Service_Click"/>
+        <Button x:Name="CSV" Content="CSV" HorizontalAlignment="Left" Margin="222,113,0,0" VerticalAlignment="Top" Width="132" Height="89" FontWeight="Bold" FontSize="14" Click="CSV_Click"/>
+        <Button x:Name="SQL" Content="SQL" HorizontalAlignment="Left" Margin="222,232,0,0" VerticalAlignment="Top" Width="132" Height="89" FontWeight="Bold" FontSize="14" Click="SQL_Click"/>
 
     </Grid>
 </Window>

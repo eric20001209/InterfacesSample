@@ -55,5 +55,20 @@ namespace Viewer
 				myList.Items.Add(person);
 			}
 		}
+
+		private void Service_Click(object sender, RoutedEventArgs e)
+		{
+
+		}
+
+		private void CSV_Click(object sender, RoutedEventArgs e)
+		{
+
+		}
+
+		private void SQL_Click(object sender, RoutedEventArgs e)
+		{
+
+		}
 	}
 }
