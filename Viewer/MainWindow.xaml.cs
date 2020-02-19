@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using People.Library;
+using Common;
 
 namespace Viewer
 {
@@ -29,17 +30,30 @@ namespace Viewer
 
 		private void Clear_Click(object sender, RoutedEventArgs e)
 		{
+			ClearListBox();
+		}
+
+		private void ClearListBox()
+		{
 			myList.Items.Clear();
 		}
 
 		private void Concrete_Click(object sender, RoutedEventArgs e)
 		{
-
+			Person[] people = repository.GetPeople();
+			foreach (var person in people)
+			{
+				myList.Items.Add(person);
+			}
 		}
 
 		private void Abstraction_Click(object sender, RoutedEventArgs e)
 		{
-
+			IEnumerable<Person> people = repository.GetPeople();
+			foreach (var person in people)
+			{
+				myList.Items.Add(person);
+			}
 		}
 	}
 }
