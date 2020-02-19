@@ -6,5 +6,10 @@ namespace Common
 {
 	public interface IPersonRepository
 	{
+		void AddPerson(Person newPerson);  //Create
+		IEnumerable<Person> GetPeople();  //Read
+		Person GetPerson(int id);  //read
+		void UpdatePerson(int id, Person updatedPerson);
+		void DeletePerson(int id);
 	}
 }
