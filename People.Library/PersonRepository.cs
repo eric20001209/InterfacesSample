@@ -14,7 +14,7 @@ namespace People.Library
 				new Person { FamilyName = "Duncan", GivenName = "Tim", Id = 3, Rating = 7, startDate = DateTime.Now },
 				new Person { FamilyName = "Rose", GivenName = "Dirk", Id = 4, Rating = 4, startDate = DateTime.Now },
 				new Person { FamilyName = "Marry", GivenName = "Lee", Id = 5, Rating = 5, startDate = DateTime.Now },
-				new Person { FamilyName = "Fedder", GivenName = "Jay", Id = 6, Rating = 6, startDate = DateTime.Now }
+				new Person { FamilyName = "Fedder", GivenName = "Jay", Id = 6, Rating = 6, startDate = DateTime.Now } 
 
 			};
 			
