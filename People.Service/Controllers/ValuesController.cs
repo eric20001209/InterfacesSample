@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Common;
 using Microsoft.AspNetCore.Mvc;
 
 namespace People.Service.Controllers
@@ -12,9 +13,21 @@ namespace People.Service.Controllers
 	{
 		// GET api/values
 		[HttpGet]
-		public ActionResult<IEnumerable<string>> Get()
+		public IActionResult Get()
 		{
-			return new string[] { "value1", "value2" };
+			Person[] plist = new Person[]
+			{
+				new Person { FamilyName = "Han", GivenName = "Shou", Id = 1, Rating = 4, startDate = DateTime.Now },
+				new Person { FamilyName = "Tom", GivenName = "Chandler", Id = 2, Rating = 5, startDate = DateTime.Now },
+				new Person { FamilyName = "Duncan", GivenName = "Tim", Id = 3, Rating = 7, startDate = DateTime.Now },
+				new Person { FamilyName = "Rose", GivenName = "Dirk", Id = 4, Rating = 4, startDate = DateTime.Now },
+				new Person { FamilyName = "Marry", GivenName = "Lee", Id = 5, Rating = 5, startDate = DateTime.Now },
+				new Person { FamilyName = "Fedder", GivenName = "Jay", Id = 6, Rating = 6, startDate = DateTime.Now }
+
+			};
+
+			return Ok(plist);
+			
 		}
 
 		// GET api/values/5
