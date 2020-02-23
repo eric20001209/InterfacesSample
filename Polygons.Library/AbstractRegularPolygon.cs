@@ -8,9 +8,6 @@ namespace Polygons.Library
 {
 	public abstract class AbstractRegularPolygon
 	{
-		private int sides;
-		private int length;
-
 		public int NumberOfSides { get; set; }
 		public int SideLength
 		{

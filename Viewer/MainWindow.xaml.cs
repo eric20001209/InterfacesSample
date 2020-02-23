@@ -16,8 +16,11 @@ using People.Library;
 using Common;
 using System.Net;
 using System.IO;
-using Newtonsoft.Json.Linq;
-using Newtonsoft.Json;
+using Repository.Service;
+using Repository.CSV;
+using Repository.SQL;
+using Repository.Factory;
+
 
 namespace Viewer
 {
@@ -44,7 +47,7 @@ namespace Viewer
 
 		private void Concrete_Click(object sender, RoutedEventArgs e)
 		{
-			Person[] people = repository.GetPeople();
+			Common.Person[] people = repository.GetPeople();
 			foreach (var person in people)
 			{
 				myList.Items.Add(person);
@@ -53,7 +56,7 @@ namespace Viewer
 
 		private void Abstraction_Click(object sender, RoutedEventArgs e)
 		{
-			IEnumerable<Person> people = repository.GetPeople();
+			IEnumerable<Common.Person> people = repository.GetPeople();
 			foreach (var person in people)
 			{
 				myList.Items.Add(person);
@@ -62,60 +65,46 @@ namespace Viewer
 
 		private void Service_Click(object sender, RoutedEventArgs e)
 		{
-			string url = "https://localhost:44315/api/values";
-			HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
-			request.Method = "Get";
-			request.ContentType = "text/html;charset=UTF-8";
+	//		Repository.Interface.IPersonRepository  myRepository = new Service();
+	//		PopulateList(new Service());
+			PopulateList1("Service");
 
-			HttpWebResponse response = (HttpWebResponse)request.GetResponse();
-			Stream myResponseStream = response.GetResponseStream();
-			StreamReader myStreamReader = new StreamReader(myResponseStream, Encoding.GetEncoding("utf-8"));
-			string retString = myStreamReader.ReadToEnd();
-			myStreamReader.Close();
-			myResponseStream.Close();
-
-			List<Person> personlist = new List<Person>();
-			dynamic json = JsonConvert.DeserializeObject(retString);
-
-			personlist = CastToPerson(json, personlist);
-
-
-			foreach (var j in personlist)
-			{
-				//personList.Add(j);
-				myList.Items.Add($"{j.GivenName}\t{j.FamilyName}");
-			}
 		}
-
-		public static List<Person> CastToPerson(dynamic myJson, List<Person> result)
-		{
-			foreach (var i in myJson)
-			{
-				Person newperson = new Person();
-				newperson.FamilyName = i.familyName;
-				newperson.GivenName = i.givenName;
-				newperson.Id = i.id;
-				newperson.Rating = i.rating;
-				newperson.startDate = i.startDate;
-				result.Add(newperson);
-			}
-
-			return result;
-		}
-
 		private void CSV_Click(object sender, RoutedEventArgs e)
 		{
-
+//			Repository.Interface.IPersonRepository myRepository = new CSV();
+//			PopulateList(new CSV());
+			PopulateList1("CSV");
 		}
 
 		private void SQL_Click(object sender, RoutedEventArgs e)
 		{
+	//		Repository.Interface.IPersonRepository myRepository = new SQL();
+	//		PopulateList(new SQL());
+			PopulateList1("SQL");
+		}
+		private void PopulateList(Repository.Interface.IPersonRepository myRepository)
+		{
+			myList.Items.Clear();
+			IEnumerable<Repository.Interface.Person> final = myRepository.GetPeople();
+			foreach (var j in final)
+			{
+				myList.Items.Add(j);
+			}
+			label.Content = myRepository.GetType().ToString();
+		}
 
+		private void PopulateList1(string DataType)
+		{
+			myList.Items.Clear();
+			Repository.Interface.IPersonRepository repository = Factory.GetRepositoryByType(DataType);
+			IEnumerable<Repository.Interface.Person> final = repository.GetPeople();
+
+			foreach (var j in final)
+			{
+				myList.Items.Add(j);
+			}
+			label.Content = DataType;
 		}
 	}
-
-	//public static List<Person> ServiceExtension
-	//{ 
-		
-	//}
 }
