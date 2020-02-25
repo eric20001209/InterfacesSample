@@ -39,6 +39,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{9C54F3BC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PeopleViewer", "PeopleViewer\PeopleViewer.csproj", "{2942646A-ADBF-4D82-AF5D-6A32E0C0D4AC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{AEA96F75-DF37-4A01-945D-90E5514A76C7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -101,6 +103,10 @@ Global
 		{2942646A-ADBF-4D82-AF5D-6A32E0C0D4AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2942646A-ADBF-4D82-AF5D-6A32E0C0D4AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2942646A-ADBF-4D82-AF5D-6A32E0C0D4AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AEA96F75-DF37-4A01-945D-90E5514A76C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEA96F75-DF37-4A01-945D-90E5514A76C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEA96F75-DF37-4A01-945D-90E5514A76C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEA96F75-DF37-4A01-945D-90E5514A76C7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -116,6 +122,7 @@ Global
 		{F2736724-14F9-4807-A022-8712727CFDF9} = {4FBC2119-4F9F-42CF-8F14-B1E626378BC1}
 		{9C54F3BC-E991-4C5F-A86B-22935A636784} = {0896CCEB-187F-485C-9014-0EAF5BC929CC}
 		{2942646A-ADBF-4D82-AF5D-6A32E0C0D4AC} = {0896CCEB-187F-485C-9014-0EAF5BC929CC}
+		{AEA96F75-DF37-4A01-945D-90E5514A76C7} = {9C54F3BC-E991-4C5F-A86B-22935A636784}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1D32A457-798A-49FB-97AD-B3BB443C60F3}
