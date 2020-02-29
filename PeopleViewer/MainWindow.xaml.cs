@@ -12,6 +12,10 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using PersonRepository.Factory;
+
+
+
 
 namespace PeopleViewer
 {
@@ -33,6 +37,13 @@ namespace PeopleViewer
 		private void GetData_Click(object sender, RoutedEventArgs e)
 		{
 
+			myList.Items.Clear();
+			var repository = ReposistoryFactory.GetRepository();
+			var people = repository.GetPeople();
+			foreach (var p in people)
+			{
+				myList.Items.Add(p);
+			}
 		}
 	}
 }

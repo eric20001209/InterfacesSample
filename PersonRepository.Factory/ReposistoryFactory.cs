@@ -15,6 +15,7 @@ namespace PersonRepository.Factory
 			string repositoryTypeName = ConfigurationManager.AppSettings["RepositoryType"];
 			Type reposityType = Type.GetType(repositoryTypeName);
 			object repository = Activator.CreateInstance(reposityType);
+
 			IPersonRepository personRepository = repository as IPersonRepository;
 			return personRepository;
 		}

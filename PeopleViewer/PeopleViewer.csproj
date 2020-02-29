@@ -94,5 +94,19 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PersonRepository.Factory\PersonRepository.Factory.csproj">
+      <Project>{e1a318a6-facf-427d-93f8-a6b131020acb}</Project>
+      <Name>PersonRepository.Factory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PersonRepository.Interface\PersonRepository.Interface.csproj">
+      <Project>{F2736724-14F9-4807-A022-8712727CFDF9}</Project>
+      <Name>PersonRepository.Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Repository.Interface\Repository.Interface.csproj">
+      <Project>{eab17bcf-8a1d-46bc-bac5-2ebd06dcca18}</Project>
+      <Name>Repository.Interface</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
