@@ -9,6 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
+   <!-- <ProjectReference Include="..\PersonRepository.Interface\Repository.Interface.csproj" />-->
     <ProjectReference Include="..\Repository.Interface\Repository.Interface.csproj" />
   </ItemGroup>
 

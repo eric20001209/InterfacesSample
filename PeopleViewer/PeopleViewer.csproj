@@ -35,6 +35,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\DynamicLoad\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -86,6 +89,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -95,17 +99,21 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\PersonRepository.Factory\PersonRepository.Factory.csproj">
+    <ProjectReference Include="..\PersonRepository.Factory\Repository.Factory.csproj">
       <Project>{e1a318a6-facf-427d-93f8-a6b131020acb}</Project>
-      <Name>PersonRepository.Factory</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\PersonRepository.Interface\PersonRepository.Interface.csproj">
-      <Project>{F2736724-14F9-4807-A022-8712727CFDF9}</Project>
-      <Name>PersonRepository.Interface</Name>
+      <Name>Repository.Factory</Name>
     </ProjectReference>
     <ProjectReference Include="..\Repository.Interface\Repository.Interface.csproj">
       <Project>{eab17bcf-8a1d-46bc-bac5-2ebd06dcca18}</Project>
       <Name>Repository.Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Repository.Interface\Repository.Interface.csproj">
+      <Project>{df25263f-7833-4916-8070-ed30756e6035}</Project>
+      <Name>Repository.Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Repository.Service\Repository.Service.csproj">
+      <Project>{39da3a6f-7e12-451b-b2ca-4f6e2b0348c4}</Project>
+      <Name>Repository.Service</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

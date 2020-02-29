@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using PersonRepository.Interface;
+using Repository.Interface;
 using System.Configuration;
+using Repository.Service;
 
-namespace PersonRepository.Factory
+namespace Repository.Factory
 {
     public class ReposistoryFactory
     {
@@ -18,6 +19,14 @@ namespace PersonRepository.Factory
 
 			IPersonRepository personRepository = repository as IPersonRepository;
 			return personRepository;
+		}
+
+		public static IPersonRepository GetRepo()
+		{
+			IPersonRepository result = null;
+			var service = new Service.Service();
+			result = service;
+			return result;
 		}
     }
 }

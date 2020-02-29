@@ -12,10 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using PersonRepository.Factory;
-
-
-
+using Repository.Factory;
 
 namespace PeopleViewer
 {
@@ -38,8 +35,10 @@ namespace PeopleViewer
 		{
 
 			myList.Items.Clear();
-			var repository = ReposistoryFactory.GetRepository();
-			var people = repository.GetPeople();
+			var repository = ReposistoryFactory
+		//	.GetRepo(); 
+			.GetRepository();
+			IEnumerable<Repository.Interface.Person> people = repository.GetPeople();
 			foreach (var p in people)
 			{
 				myList.Items.Add(p);

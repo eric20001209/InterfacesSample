@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F2736724-14F9-4807-A022-8712727CFDF9}</ProjectGuid>
+    <ProjectGuid>{E1A318A6-FACF-427D-93F8-A6B131020ACB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PersonRepository.Interface</RootNamespace>
-    <AssemblyName>PersonRepository.Interface</AssemblyName>
+    <RootNamespace>PersonRepository.Factory</RootNamespace>
+    <AssemblyName>PersonRepository.Factory</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -31,7 +31,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.IdentityModel.Protocols">
+      <HintPath>..\..\..\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.identitymodel.protocols\5.3.0\lib\netstandard2.0\Microsoft.IdentityModel.Protocols.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -41,9 +45,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IPersonRepository.cs" />
-    <Compile Include="Person.cs" />
+    <Compile Include="ReposistoryFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Repository.CSV\Repository.CSV.csproj">
+      <Project>{5ec73ce2-ea40-4ed7-be02-662c98601f8f}</Project>
+      <Name>Repository.CSV</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Repository.Interface\Repository.Interface.csproj">
+      <Project>{df25263f-7833-4916-8070-ed30756e6035}</Project>
+      <Name>Repository.Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Repository.Service\Repository.Service.csproj">
+      <Project>{39da3a6f-7e12-451b-b2ca-4f6e2b0348c4}</Project>
+      <Name>Repository.Service</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
